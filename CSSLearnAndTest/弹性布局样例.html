@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--http://www.cnblogs.com/wangfupeng1988/p/4314160.html-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            font-size: 100%;
+        }
+
+        body {
+            font-size: 1em;
+        }
+
+        #wrap {
+            width: 46.25em; /*740px ÷ 16 = 46.25em */
+            margin: 1.5em auto; /*24px ÷ 16 = 1.5em*/
+            border: 0.0625em solid #ccc; /*1px ÷ 16 = 0.0625em*/
+        }
+
+        ul li + li {
+            border-top: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <!--这里提到margin，不得不提一下margin的这一特性——纵向重叠。如下图，<p>的纵向margin是16px，那么两个<p>之间纵向的距离是多少？
+
+　　按常理来说应该是 16 + 16 = 32px，但是答案仍然是 16px。因为纵向的margin是会重叠的，大的会把小的“吃掉”-->
+    <p>100</p>
+    <p>200</p>
+    <p style="margin-top: 20px">300</p>
+
+
+    <div style="border: 10px solid;border-color: #333 transparent transparent;width: 0;"></div>
+
+
+    <!--<div style="border: 3px solid blue;padding: 2px"><img src=../imgs/maptype.png alt=""></div>-->
+
+
+
+    <!--<div style="border: 3px solid blue;padding: 2px"><img style="float: left" src=../imgs/maptype.png alt=""></div>-->
+
+
+    <span style="border: 1px solid #C91F2C;width: 500px;height: 300px;">测试inline是指width与width无效</span>
+    <span style=" float: left;border: 1px solid #C91F2C;width: 500px;height: 300px;">float的破坏性与包裹性</span>
+    <span style=" float: left;border: 1px solid #C91F2C;width: 500px;height: 300px;">测试inline是指width与width无效</span>
+
+</div>
+</body>
+</html>

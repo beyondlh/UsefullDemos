@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--append() & prepend()实在元素内插入内容（该内容变成该元素的子元素或节点），after() & before()是在元素的外面插入内容（其内容变成元素的兄弟节点）。-->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $().ready(function () {
+            $("#buttonAppend").click(function () {
+                $("#testDOMAppend").append('<a href="#">append方法</a>');
+            });
+            $("#buttonAfter").click(function () {
+                $("#testDOMAfter").after('<a href="#">after方法</a>');
+            });
+            $("#buttonAppendTo").click(function () {
+                $('<a href="#">appendTo方法</a>').appendTo("#testDOMAppendTo");
+            });
+            $("#buttonPretend").click(function () {
+                $("#testDOM").append('<a href="#">append方法</a>');
+            });
+            $("#buttonBefore").click(function () {
+                $("#testDOMPBefore").before('<a href="#">before</a>');
+            });
+            $("#button3").click(function () {
+                $('<a href="#">appendTo方法</a>').appendTo("#testDOM");
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="testDOMAppend">JQuery的append</div>
+<div id="testDOMAfter">JQuery的after</div>
+<div id="testDOMAppendTo">JQuery的appendTo</div>
+<div id="testDOMPretend">JQuery的pretend</div>
+<div id="testDOMPBefore">JQuery的before</div>
+
+
+
+<button id="buttonAppend">append</button>
+<button id="buttonAfter">after</button>
+<button id="buttonAppendTo">appendTo</button>
+<button id="buttonPretend">pretend</button>
+<button id="buttonBefore">before</button>
+<p>要想看出区别，请F12看源码，右击不行</p>
+</body>
+</html>
