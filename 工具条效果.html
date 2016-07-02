@@ -3,20 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>sasasasa</title>
-
     <style>
-
         html, body {
             padding: 0;
             margin: 0;
             height: 100%;
             font-size: 12px;
-        }
-        .tool-wrap:after, .tool-wrap ul:after {
-            content: " ";
-            display: block;
-            clear: both;
-            height: 0;
         }
         .tool-wrap {
             position: absolute;
@@ -28,14 +20,24 @@
             background: #fff;
             padding: 0;
             box-shadow: 1px 1px 3px #c8c6c7;
-            
         }
+
         .tool-wrap li {
             display: inline-block;
             float: left;
             width: 90px;
             text-align: center;
         }
+
+        .tool-wrap:after,
+        .tool-wrap ul:after {
+            content: " ";
+            display: block;
+            clear: both;
+            height: 0;
+        }
+
+
         .tool-wrap li span {
             display: inline-block;
             width: 90px;
@@ -65,19 +67,16 @@
             background: #ccc;
             display: block;
         }
+
         .tool-wrap > li:last-child > span:after {
             display: none;
         }
 
-        .tool-wrap ul {
-            padding: 0;
-            display: none;
-        }
-        .tool-wrap .sub-tool {
+/*        .tool-wrap .sub-tool {
             background-image: url();
             background-repeat: no-repeat;
             background-position: center right;
-        }
+        }*/
     </style>
 </head>
 <body>
